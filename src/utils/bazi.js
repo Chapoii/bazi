@@ -205,10 +205,10 @@ function analyzeWuxing(count) {
 }
 
 // 日主分析
-function analyzeDayMaster(dayPillar, wuxingCount) {
+function analyzeDayMaster(dayPillar, wuxingAnalysis) {
   const dayWx = dayPillar.ganWuxing
-  const dayCount = wuxingCount.find(w => w.wuxing === dayWx)
-  const isStrong = dayCount && dayCount.count >= 3
+  const dayItem = wuxingAnalysis.find(w => w.wuxing === dayWx)
+  const isStrong = dayItem && dayItem.count >= 3
   
   // 找喜用神
   const shengke = WUXING_SHENG_KE[dayWx]
@@ -313,7 +313,7 @@ export function calculateBazi(year, month, day, hour, gender) {
   const wuxingAnalysis = analyzeWuxing(wuxingCount)
   
   // 日主分析
-  const dayMaster = analyzeDayMaster(dayPillar, wuxingCount)
+  const dayMaster = analyzeDayMaster(dayPillar, wuxingAnalysis)
   
   // 大运
   const daYun = getDaYun(yearPillar, gender, year)
