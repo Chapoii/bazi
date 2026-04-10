@@ -218,7 +218,7 @@
     <!-- Footer -->
     <footer class="footer">
       <p>☯ 八字排盘 · 仅供娱乐参考，不作为任何决策依据</p>
-      <p class="footer-sub">© 2025 bazi · MIT License</p>
+      <p class="footer-sub">© 2026 bazi · MIT License</p>
     </footer>
   </div>
 </template>
@@ -295,6 +295,9 @@ a { color: inherit; text-decoration: none; }
 .nav-logo { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 1.15rem; }
 .nav-links { display: flex; gap: 28px; }
 .nav-links a { font-size: 0.88rem; color: var(--text-dim); font-weight: 500; }
+.navbar:not(.scrolled) .nav-logo { color: #fff; }
+.navbar:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.7); }
+.navbar:not(.scrolled) .nav-links a:hover { color: #fff; }
 .nav-cta { background: var(--primary) !important; color: #fff !important; padding: 8px 20px; border-radius: 25px; }
 
 .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%); text-align: center; color: #fff; padding: 80px 24px; }
